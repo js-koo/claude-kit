@@ -47,7 +47,7 @@ backup_settings() {
 
 # 4. Create individual command symlinks (preserves existing files like notifier.md)
 create_command_links() {
-    for cmd in handoff context worktree audit; do
+    for cmd in handoff context worktree audit ho; do
         local target="$SCRIPT_DIR/commands/${cmd}.md"
         local link="$CLAUDE_DIR/commands/${cmd}.md"
 
@@ -144,10 +144,12 @@ main() {
     echo "  2. Start Claude: claude"
     echo ""
     echo "Available commands:"
-    echo "  /handoff  - Create session handoff document"
-    echo "  /context  - Show project context"
-    echo "  /worktree - Manage git worktrees"
-    echo "  /audit    - Security audit"
+    echo "  /handoff write  - Create session handoff document"
+    echo "  /handoff read   - Read handoff and continue"
+    echo "  /ho w, /ho r    - Short aliases for handoff"
+    echo "  /context        - Show project context"
+    echo "  /worktree       - Manage git worktrees"
+    echo "  /audit          - Security audit"
 }
 
 main "$@"

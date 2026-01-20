@@ -4,7 +4,7 @@ Custom configuration and commands for Claude Code CLI.
 
 ## Features
 
-- **Custom Commands**: `/handoff`, `/context`, `/worktree`, `/audit`
+- **Custom Commands**: `/handoff`, `/ho`, `/context`, `/worktree`, `/audit`
 - **Security Hooks**: Block dangerous bash commands automatically
 - **Shell Aliases**: Quick shortcuts for common Claude operations
 - **Settings Merge**: Non-destructive installation preserves existing settings
@@ -34,10 +34,18 @@ make install
 
 | Command | Description |
 |---------|-------------|
-| `/handoff` | Create session handoff document for continuity |
+| `/handoff write` | Create session handoff document for continuity |
+| `/handoff read` | Read handoff and continue work |
+| `/ho w` | Short alias for `/handoff write` |
+| `/ho r` | Short alias for `/handoff read` |
 | `/context` | Show current project context and status |
 | `/worktree` | Manage git worktrees for parallel development |
 | `/audit` | Security and best practices audit |
+
+### /handoff Workflow
+
+1. End of session: Run `/handoff write` (or `/ho w`)
+2. New session: Run `/handoff read` (or `/ho r`)
 
 ## Shell Aliases
 
@@ -74,6 +82,7 @@ build-my-claude/
 │   └── settings.template.json
 ├── commands/
 │   ├── handoff.md
+│   ├── ho.md
 │   ├── context.md
 │   ├── worktree.md
 │   └── audit.md

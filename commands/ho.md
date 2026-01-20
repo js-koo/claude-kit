@@ -1,21 +1,21 @@
 ---
-description: Generate session handoff document for continuity
+description: Session handoff (short alias)
 ---
 
-# /handoff - Session Handoff
+# /ho - Session Handoff (Short)
 
-Manage session handoff documents for seamless continuation between sessions.
+Short alias for `/handoff`. Manage session handoff documents for seamless continuation between sessions.
 
 ## Usage
 
-- `/handoff write` - Create a Handoff.md document
-- `/handoff read` - Read existing Handoff.md and continue work
+- `/ho w` - Create a Handoff.md document
+- `/ho r` - Read existing Handoff.md and continue work
 
-Running `/handoff` without arguments shows this usage information.
+Running `/ho` without arguments shows this usage information.
 
 ## Commands
 
-### /handoff write
+### /ho w
 
 Create a Handoff.md document that captures the current session state.
 
@@ -65,18 +65,18 @@ Display:
 Handoff.md created successfully.
 
 To continue:
-- New session: /handoff read (or /ho r)
-- This session: /clear, then /handoff read
+- New session: /ho r (or /handoff read)
+- This session: /clear, then /ho r
 ```
 
-### /handoff read
+### /ho r
 
 Read an existing Handoff.md and continue the work.
 
 **Instructions:**
 
 1. Read `./Handoff.md` in the current directory
-2. If it doesn't exist, inform the user and suggest running `/handoff write` first
+2. If it doesn't exist, inform the user and suggest running `/ho w` first
 3. Parse and understand the context:
    - Goal: What we're trying to achieve
    - Done: What's already completed
