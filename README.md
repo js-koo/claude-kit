@@ -12,7 +12,13 @@ Custom configuration and commands for Claude Code CLI.
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/build-my-claude.git ~/work/build-my-claude
+git clone https://github.com/js-koo/build-my-claude.git ~/work/build-my-claude && ~/work/build-my-claude/install.sh && source ~/.zshrc
+```
+
+Or step by step:
+
+```bash
+git clone https://github.com/js-koo/build-my-claude.git ~/work/build-my-claude
 cd ~/work/build-my-claude
 ./install.sh
 source ~/.zshrc
