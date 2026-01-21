@@ -1,4 +1,4 @@
-# build-my-claude
+# claude-kit
 
 Custom configuration and commands for Claude Code CLI.
 
@@ -12,14 +12,14 @@ Custom configuration and commands for Claude Code CLI.
 ## Installation
 
 ```bash
-git clone https://github.com/js-koo/build-my-claude.git ~/work/build-my-claude && ~/work/build-my-claude/install.sh && source ~/.zshrc
+git clone https://github.com/js-koo/claude-kit.git ~/claude-kit && ~/claude-kit/install.sh && source ~/.zshrc
 ```
 
 Or step by step:
 
 ```bash
-git clone https://github.com/js-koo/build-my-claude.git ~/work/build-my-claude
-cd ~/work/build-my-claude
+git clone https://github.com/js-koo/claude-kit.git ~/claude-kit
+cd ~/claude-kit
 ./install.sh
 source ~/.zshrc
 ```
@@ -78,7 +78,7 @@ The security hook blocks dangerous commands including:
 ## Project Structure
 
 ```
-build-my-claude/
+claude-kit/
 ├── install.sh              # Installation script
 ├── uninstall.sh            # Removal script
 ├── update.sh               # Update script
